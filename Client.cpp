@@ -17,14 +17,8 @@ Client::Client(
 }
 	
 int Client::run() {
-	std::cout
-		<< "name: " << _name << std::endl
-		<< "port: " << _port << std::endl
-		<< "period: " << _connection_period << std:: endl;
 
 	while(true) {
-		std::cout << _name << " wake up\n";
-
 		auto now = std::chrono::system_clock::now();
 
 		auto millis = (now.time_since_epoch().count() / 1000000) % 1000;
